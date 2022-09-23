@@ -1,0 +1,39 @@
+{% extends "App1/padre.html" %}
+
+{% block botones %}
+<a class="navbar-brand" href="{% url 'Inicio' %}">Inicio</a>
+<a class="navbar-brand" href="{% url 'Carreras' %}">Carreras</a>
+<a class="navbar-brand" href="{% url 'Cursos' %}">Cursos</a>
+<a class="navbar-brand" href="{% url 'BuscarCu' %}">Buscar</a>
+{% endblock %}
+
+{% block titulo %}
+
+Aqui podemos ver los cursos de la categoría {{busqueda}}
+
+{% endblock %}
+
+{% block info %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Estas buscando la categoria: {{busqueda}}</p>
+
+    {% for curso in cursos %}
+        <ul>
+            <li>categoria: {{curso.categorias}}</li>
+            <li>curso: {{curso.cursos}}</li>
+            <li>duracion: {{curso.duracion}}</li>
+        </ul>
+    
+    {% endfor %}
+
+</body>
+</html>
+{% endblock %}

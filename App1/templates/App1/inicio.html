@@ -1,0 +1,15 @@
+{% extends "App1/padre.html" %}
+
+{% block botones %}
+<a class="navbar-brand" href="{% url 'Inicio' %}">Inicio</a>
+<a class="navbar-brand" href="{% url 'Cursos' %}">Cursos</a>
+<a class="navbar-brand" href="{% url 'Carreras' %}">Carreras</a>
+<a class="navbar-brand" href="{% url 'Registrarse' %}">Registrarse</a>
+
+{% endblock %}
+
+{% block titulo %}
+
+Bienvenidos a mi primera Página web
+
+{% endblock %}

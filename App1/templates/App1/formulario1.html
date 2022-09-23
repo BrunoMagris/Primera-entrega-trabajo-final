@@ -1,0 +1,20 @@
+{% extends "App1/padre.html" %}
+
+{% block titulo %}
+
+Aqui registraremos nuestro usuario
+
+{% endblock %}
+
+{% block info %}
+
+<form action="" method="POST"> {% csrf_token %}
+    <table>
+    {{form1.as_table}}  
+    </table>
+    <input type="submit" value="Completar Registrarse">
+
+
+    </form>
+
+{% endblock %}

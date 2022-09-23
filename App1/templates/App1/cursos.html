@@ -1,0 +1,38 @@
+{% extends "App1/padre.html" %}
+
+{% block botones %}
+<a class="navbar-brand" href="{% url 'Inicio' %}">Inicio</a>
+<a class="navbar-brand" href="{% url 'Carreras' %}">Carreras</a>
+<a class="navbar-brand" href="{% url 'BuscarCu' %}">Buscar</a>
+{% endblock %}
+
+{% block titulo %}
+
+Aqui podemos ver los cursos
+
+{% endblock %}
+
+{% block info %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% for Cursos in Cursos %}
+
+<p>{{Cursos.id}}:
+    categorias: {{Cursos.categorias}}, curso: {{Cursos.curso}}, duracion: {{Cursos.duracion}}
+
+
+</p>
+{% endfor %}
+</body>
+</html>
+
+
+{% endblock %}
